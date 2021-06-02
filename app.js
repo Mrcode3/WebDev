@@ -5,7 +5,7 @@ const express = require("express");
 const request = require("request");
 // Initialise Express
 const app = express();
-const port = 3000;
+
 
 // Set the view engine to ejs
 app.set('view engine', 'ejs');
@@ -70,7 +70,8 @@ app.post("/", (req, res) => {
 })
 
 
-
-app.listen(port, () => {
-  console.log(`Server running at ${port}`);
-});
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 3000;
+}
+app.listen(port);
