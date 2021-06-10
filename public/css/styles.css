@@ -642,4 +642,14 @@ html {
   }
 }
 
+@media(max-width:450px) {
+  html {
+    font-size: 20%;
+  }
+
+  .navbar-link {
+    margin: 0 .7rem;
+  }
+}
+
 /* End Responsive*/
